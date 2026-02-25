@@ -25,26 +25,32 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
-                      <Component id="btnAggiungi" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="67" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="btnSalva" min="-2" max="-2" attributes="0"/>
                           <Component id="btnCarica" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnSalva" min="-2" max="-2" attributes="0"/>
                       </Group>
+                      <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
                   </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="btnCercaStudente" alignment="0" min="-2" pref="111" max="-2" attributes="0"/>
-                          <Component id="btnElimina" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="btnAggiungi" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="btnElimina" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="btnCercaStudente" min="-2" pref="111" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
                   </Group>
               </Group>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Component id="jScrollPane1" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="0" pref="16" max="32767" attributes="0"/>
           </Group>
@@ -58,13 +64,13 @@
                   <Component id="jScrollPane1" min="-2" max="-2" attributes="0"/>
                   <Group type="102" attributes="0">
                       <Component id="btnCercaStudente" min="-2" pref="60" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
                       <Component id="btnElimina" min="-2" pref="60" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                       <Component id="btnAggiungi" min="-2" pref="60" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
                       <Component id="btnCarica" min="-2" pref="60" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
                       <Component id="btnSalva" min="-2" pref="60" max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -76,21 +82,33 @@
   <SubComponents>
     <Component class="javax.swing.JButton" name="btnCercaStudente">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="99" red="99" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Cerca Studente"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="btnElimina">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="99" red="99" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Elimina Studente"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="btnAggiungi">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="99" red="99" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Aggiungi Studente "/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="btnCarica">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="99" red="99" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Carica File"/>
       </Properties>
       <Events>
@@ -99,6 +117,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="btnSalva">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="99" red="99" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Salva File"/>
       </Properties>
     </Component>
@@ -111,6 +132,14 @@
       <SubComponents>
         <Component class="javax.swing.JTable" name="tblAnagrafe">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="cc" red="99" type="rgb"/>
+            </Property>
+            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+              <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                <LineBorder/>
+              </Border>
+            </Property>
             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
               <Table columnCount="4" rowCount="4">
                 <Column editable="true" title="Title 1" type="java.lang.Object"/>

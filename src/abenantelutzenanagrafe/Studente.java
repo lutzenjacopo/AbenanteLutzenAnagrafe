@@ -11,15 +11,13 @@ import java.util.Objects;
  * @author lutzen.jacopo
  */
 public class Studente {
-    private String matricola,nome,cognome,anno,sezione,indirizzo;
+    private String matricola,nome,cognome,anno;
 
-    public Studente(String matricola, String nome, String cognome, String anno, String sezione, String indirizzo) {
+    public Studente(String matricola, String nome, String cognome, String anno) {
         this.matricola = matricola;
         this.nome = nome;
         this.cognome = cognome;
         this.anno = anno;
-        this.sezione = sezione;
-        this.indirizzo = indirizzo;
     }
 
     public String getMatricola() {
@@ -54,21 +52,7 @@ public class Studente {
         this.anno = anno;
     }
 
-    public String getSezione() {
-        return sezione;
-    }
-
-    public void setSezione(String sezione) {
-        this.sezione = sezione;
-    }
-
-    public String getIndirizzo() {
-        return indirizzo;
-    }
-
-    public void setIndirizzo(String indirizzo) {
-        this.indirizzo = indirizzo;
-    }
+  
 
     @Override
     public int hashCode() {
@@ -94,7 +78,7 @@ public class Studente {
 
     @Override
     public String toString() {
-        return  matricola + " " + nome + " " + cognome + " " + anno + " " + sezione + " " + indirizzo ;
+        return  matricola + "-" + nome + "-" + cognome + "-" + anno;
     }
     
 }

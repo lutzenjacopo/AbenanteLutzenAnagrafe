@@ -38,12 +38,16 @@ public class AnagrafeGUI extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        btnCercaStudente.setBackground(new java.awt.Color(153, 153, 255));
         btnCercaStudente.setText("Cerca Studente");
 
+        btnElimina.setBackground(new java.awt.Color(153, 153, 255));
         btnElimina.setText("Elimina Studente");
 
+        btnAggiungi.setBackground(new java.awt.Color(153, 153, 255));
         btnAggiungi.setText("Aggiungi Studente ");
 
+        btnCarica.setBackground(new java.awt.Color(153, 153, 255));
         btnCarica.setText("Carica File");
         btnCarica.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -51,8 +55,11 @@ public class AnagrafeGUI extends javax.swing.JFrame {
             }
         });
 
+        btnSalva.setBackground(new java.awt.Color(153, 153, 255));
         btnSalva.setText("Salva File");
 
+        tblAnagrafe.setBackground(new java.awt.Color(153, 204, 255));
+        tblAnagrafe.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         tblAnagrafe.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -73,19 +80,23 @@ public class AnagrafeGUI extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(42, 42, 42)
-                        .addComponent(btnAggiungi))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(67, 67, 67)
+                        .addGap(61, 61, 61)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnSalva)
-                            .addComponent(btnCarica)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(46, 46, 46)
+                            .addComponent(btnCarica)
+                            .addComponent(btnSalva))
+                        .addGap(41, 41, 41))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addContainerGap()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnCercaStudente, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnElimina))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(btnAggiungi)
+                                .addGap(21, 21, 21))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(btnElimina)
+                                .addGap(30, 30, 30))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(btnCercaStudente, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(33, 33, 33)))))
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 16, Short.MAX_VALUE))
         );
@@ -97,13 +108,13 @@ public class AnagrafeGUI extends javax.swing.JFrame {
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(btnCercaStudente, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(24, 24, 24)
+                        .addGap(29, 29, 29)
                         .addComponent(btnElimina, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(36, 36, 36)
+                        .addGap(25, 25, 25)
                         .addComponent(btnAggiungi, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(30, 30, 30)
+                        .addGap(38, 38, 38)
                         .addComponent(btnCarica, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(34, 34, 34)
+                        .addGap(33, 33, 33)
                         .addComponent(btnSalva, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(65, Short.MAX_VALUE))
         );
