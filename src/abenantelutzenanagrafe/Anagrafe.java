@@ -26,19 +26,30 @@ public class Anagrafe {
     
     
     public boolean aggiungiStudente(Studente s){
+        if(insiemeMatricole.contains(s.getMatricola())){
+            listaStudenti.add(s);
+            return true;
+        }
     return false;
     }
     public boolean eliminaStudente(String matricola){
+        if(cercaStudente(matricola)!=null){
+            mappaStudenti.replace(matricola, null);
+            return true;
+        }
     return false;
     }
     public Studente cercaStudente(String matricola){
+        if(mappaStudenti.containsKey(matricola)){
+            return mappaStudenti.get(matricola);
+        }
     return null;
     }
     public Collection<Studente> getTuttiStudenti(){
-    return null;
+            return mappaStudenti.values();
     }
     public int numeroStudenti(){
-        return 0;
+        return listaStudenti.size();
     }
 
 }
