@@ -38,12 +38,16 @@ public class AnagrafeGUI extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        btnCercaStudente.setBackground(new java.awt.Color(153, 153, 255));
         btnCercaStudente.setText("Cerca Studente");
 
+        btnElimina.setBackground(new java.awt.Color(153, 153, 255));
         btnElimina.setText("Elimina Studente");
 
+        btnAggiungi.setBackground(new java.awt.Color(153, 153, 255));
         btnAggiungi.setText("Aggiungi Studente ");
 
+        btnCarica.setBackground(new java.awt.Color(153, 153, 255));
         btnCarica.setText("Carica File");
         btnCarica.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -51,8 +55,10 @@ public class AnagrafeGUI extends javax.swing.JFrame {
             }
         });
 
+        btnSalva.setBackground(new java.awt.Color(153, 153, 255));
         btnSalva.setText("Salva File");
 
+        tblAnagrafe.setBackground(new java.awt.Color(153, 204, 255));
         tblAnagrafe.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         tblAnagrafe.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {

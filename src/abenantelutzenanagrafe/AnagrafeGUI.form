@@ -82,21 +82,33 @@
   <SubComponents>
     <Component class="javax.swing.JButton" name="btnCercaStudente">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="99" red="99" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Cerca Studente"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="btnElimina">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="99" red="99" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Elimina Studente"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="btnAggiungi">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="99" red="99" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Aggiungi Studente "/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="btnCarica">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="99" red="99" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Carica File"/>
       </Properties>
       <Events>
@@ -105,6 +117,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="btnSalva">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="99" red="99" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Salva File"/>
       </Properties>
     </Component>
@@ -117,6 +132,9 @@
       <SubComponents>
         <Component class="javax.swing.JTable" name="tblAnagrafe">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="cc" red="99" type="rgb"/>
+            </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                 <LineBorder/>
