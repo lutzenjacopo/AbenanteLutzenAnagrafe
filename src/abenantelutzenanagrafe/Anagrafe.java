@@ -26,15 +26,20 @@ public class Anagrafe {
     
     
     public boolean aggiungiStudente(Studente s){
-        if(insiemeMatricole.contains(s.getMatricola())){
+        if(!insiemeMatricole.contains(s.getMatricola())){
             listaStudenti.add(s);
+            insiemeMatricole.add(s.getMatricola());
+            mappaStudenti.put(s.getMatricola(), s);
             return true;
         }
     return false;
     }
     public boolean eliminaStudente(String matricola){
         if(cercaStudente(matricola)!=null){
-            mappaStudenti.replace(matricola, null);
+            listaStudenti.remove(mappaStudenti.get(matricola));
+            mappaStudenti.remove(matricola);
+            insiemeMatricole.remove(matricola);
+            
             return true;
         }
     return false;
