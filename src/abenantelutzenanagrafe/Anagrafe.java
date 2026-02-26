@@ -16,11 +16,14 @@ public class Anagrafe {
     private HashMap<String, Studente> mappaStudenti;
 
     public Anagrafe() {
+        listaStudenti = new ArrayList<>();
+        insiemeMatricole = new HashSet<>();
+        mappaStudenti = new HashMap<>();
     }
 
     @Override
     public String toString() {
-        return "Anagrafe{" + "listaStudenti=" + listaStudenti + '}';
+        return "listaStudenti=" + listaStudenti ;
     }
     
     

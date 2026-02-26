@@ -81,4 +81,11 @@ public class Studente {
         return  matricola + "-" + nome + "-" + cognome + "-" + anno;
     }
     
+    public static Studente fromFileString(String riga) {
+        String[] parti = riga.split("-");
+        if (parti.length == 4) {
+            return new Studente(parti[0], parti[1], parti[2],parti[3]);
+        }
+        return null;
+    }
 }

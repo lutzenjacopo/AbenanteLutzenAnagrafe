@@ -14,7 +14,6 @@ public class AbenanteLutzenAnagrafe {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        GestioneFile g= new GestioneFile();
     }
     
 }
