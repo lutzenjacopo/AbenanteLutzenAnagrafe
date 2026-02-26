@@ -14,6 +14,8 @@ public class AbenanteLutzenAnagrafe {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        AnagrafeGUI g = new  AnagrafeGUI ();
+       g.setVisible(true);
     }
     
 }
