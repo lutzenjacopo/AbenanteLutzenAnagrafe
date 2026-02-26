@@ -130,14 +130,15 @@ public class StudenteGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_txtAnnoActionPerformed
 
     private void btnAggiungiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAggiungiActionPerformed
-       String nome,cognome, matricola,anno;
+     Anagrafe a = new Anagrafe();
+      String nome,cognome, matricola,anno;
       nome= txtNome.getText();
       cognome= txtCognome.getText();
       matricola= txtMatricola.getText();
       anno= txtAnno.getText();
       
       Studente s= new Studente(matricola,nome,cognome,anno);
-      
+      a.aggiungiStudente(s);
     }//GEN-LAST:event_btnAggiungiActionPerformed
 
     /**
