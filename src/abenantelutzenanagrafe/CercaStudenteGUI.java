@@ -28,46 +28,72 @@ public class CercaStudenteGUI extends javax.swing.JFrame {
 
         txtMatricola = new javax.swing.JTextField();
         lblMatricola = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        btnCerca = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         lblMatricola.setFont(new java.awt.Font("Lucida Bright", 0, 12)); // NOI18N
         lblMatricola.setText("Matricola dello studente");
 
-        jButton1.setBackground(new java.awt.Color(0, 204, 0));
-        jButton1.setFont(new java.awt.Font("Lucida Bright", 0, 12)); // NOI18N
-        jButton1.setText("Cerca");
+        btnCerca.setBackground(new java.awt.Color(0, 204, 0));
+        btnCerca.setFont(new java.awt.Font("Lucida Bright", 0, 12)); // NOI18N
+        btnCerca.setText("Cerca");
+        btnCerca.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCercaActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(93, 93, 93)
-                .addComponent(jButton1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(lblMatricola)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
                 .addComponent(txtMatricola, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(24, 24, 24))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(99, 99, 99)
+                .addComponent(btnCerca)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(93, 93, 93)
+                .addGap(44, 44, 44)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblMatricola)
                     .addComponent(txtMatricola, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(28, 28, 28))
+                .addGap(49, 49, 49)
+                .addComponent(btnCerca, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(18, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnCercaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCercaActionPerformed
+        String matricola = txtMatricola.getText().trim();
+        if (matricola.isEmpty()) {
+            javax.swing.JOptionPane.showMessageDialog(this, "Inserisci una matricola!");
+            return;
+        }
+
+        // ✅ Cerca nell'anagrafeCondivisa
+        Studente s = AnagrafeGUI.a.cercaStudente(matricola);
+        if (s != null) {
+            javax.swing.JOptionPane.showMessageDialog(this,
+                "Studente trovato:\n" +
+                "Matricola: " + s.getMatricola() + "\n" +
+                "Nome: " + s.getNome() + "\n" +
+                "Cognome: " + s.getCognome() + "\n" +
+                "Anno: " + s.getAnno());
+        } else {
+            javax.swing.JOptionPane.showMessageDialog(this, "Studente non trovato!");
+        }
+    }//GEN-LAST:event_btnCercaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -105,7 +131,7 @@ public class CercaStudenteGUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton btnCerca;
     private javax.swing.JLabel lblMatricola;
     private javax.swing.JTextField txtMatricola;
     // End of variables declaration//GEN-END:variables
