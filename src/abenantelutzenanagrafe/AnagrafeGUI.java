@@ -90,7 +90,7 @@ public class AnagrafeGUI extends javax.swing.JFrame {
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addComponent(btnElimina).addGap(30,30,30))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(btnCercaStudente, javax.swing.GroupLayout.PREFERRED_SIZE,111,javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(btnCercaStudente, javax.swing.GroupLayout.PREFERRED_SIZE,130,javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(33,33,33)))))
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE,javax.swing.GroupLayout.DEFAULT_SIZE,javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0,16,Short.MAX_VALUE))
