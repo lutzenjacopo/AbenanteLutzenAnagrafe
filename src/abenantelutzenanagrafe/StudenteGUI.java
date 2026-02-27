@@ -8,6 +8,7 @@ public class StudenteGUI extends javax.swing.JFrame {
 
     // ✅ Riferimento alla finestra principale per aggiornare la tabella
     private AnagrafeGUI anagrafeGUI;
+    private Controlli c;
 
     public StudenteGUI(AnagrafeGUI anagrafeGUI) {
         this.anagrafeGUI = anagrafeGUI;
@@ -100,8 +101,21 @@ public class StudenteGUI extends javax.swing.JFrame {
         String nome = txtNome.getText().trim();
         String cognome = txtCognome.getText().trim();
         String anno = txtAnno.getText().trim();
-
-        if (matricola.isEmpty() || nome.isEmpty() || cognome.isEmpty() || anno.isEmpty()) {
+        
+        if (!c.controlloInt(txtAnno.getText().trim())){
+            javax.swing.JOptionPane.showMessageDialog(this, "Errore: L'anno inserito non è un numero valido!");
+            return;
+        }
+        if (c.controlloString(txtNome.getText().trim())){
+            javax.swing.JOptionPane.showMessageDialog(this, "Errore: Il nome inserito non è un valore valido!");
+            return;
+        }
+        if (c.controlloString(txtCognome.getText().trim())){
+            javax.swing.JOptionPane.showMessageDialog(this, "Errore: Il cognome inserito non è un valore valido!");
+            return;
+        }
+        
+        if (!c.controlloNull(txtMatricola.getText().trim())||!c.controlloNull(txtNome.getText().trim())||!c.controlloNull(txtCognome.getText().trim())||!c.controlloNull(txtAnno.getText().trim())){
             javax.swing.JOptionPane.showMessageDialog(this, "Compila tutti i campi!");
             return;
         }
