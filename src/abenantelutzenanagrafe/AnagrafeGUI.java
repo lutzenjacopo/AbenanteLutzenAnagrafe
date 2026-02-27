@@ -9,7 +9,7 @@ import javax.swing.table.DefaultTableModel;
 
 public class AnagrafeGUI extends javax.swing.JFrame {
 
-    //  Anagrafe CONDIVISA tra tutte le finestre
+    //  Anagrafe condivisa tra tutte le finestre
     public static Anagrafe a = new Anagrafe();
 
     private static final java.util.logging.Logger logger =
@@ -17,12 +17,12 @@ public class AnagrafeGUI extends javax.swing.JFrame {
 
     public AnagrafeGUI() {
         initComponents();
-        String[] colonne = {"Matricola", "Nome", "Cognome", "Anno"};
+        String[] colonne = {"Matricola", "Nome", "Cognome", "Anno"};//cambia i nomi delle colonne della tabella JTable
         DefaultTableModel model = new DefaultTableModel(colonne, 0);
         tblAnagrafe.setModel(model);
     }
 
-    // ✅ Metodo pubblico per aggiornare la tabella dall'esterno (es. StudenteGUI)
+    // Metodo pubblico per aggiornare la tabella dall'esterno (es. StudenteGUI)
     public void aggiornaTabella() {
         DefaultTableModel model = (DefaultTableModel) tblAnagrafe.getModel();
         model.setRowCount(0);
@@ -115,20 +115,28 @@ public class AnagrafeGUI extends javax.swing.JFrame {
         );
         pack();
     }
-
+/**
+ * bottone carica 
+ * @param evt 
+ */
     private void btnCaricaActionPerformed(java.awt.event.ActionEvent evt) {
-        GestioneFile gf = new GestioneFile();
-        ArrayList<Studente> lista = gf.caricaDaFile("studenti.txt");
+        GestioneFile gf = new GestioneFile();// cera un oggetto gestione File 
+        ArrayList<Studente> lista = gf.caricaDaFile("studenti.txt"); //g
         a = new Anagrafe();
         for (Studente s : lista) {
-            a.aggiungiStudente(s);
+            a.aggiungiStudente(s);// per ogni studente aggiunge lo studente 
         }
-        aggiornaTabella();
-        javax.swing.JOptionPane.showMessageDialog(this, "Caricamento completato! " + lista.size() + " studenti caricati.");
+        aggiornaTabella();// aggiorna la tabella 
+        javax.swing.JOptionPane.showMessageDialog(this, "Caricamento completato! " + lista.size() + " studenti caricati."); // mostra un messaggio se è stato finito il caricamento
     }
 
+    
+    /**
+     * bottone che richiama la GUI dello studente per aggiumgerlo
+     * @param evt 
+     */
     private void btnStudenteGUIActionPerformed(java.awt.event.ActionEvent evt) {
-        // ✅ Passiamo 'this' così StudenteGUI può aggiornare la tabella
+        //  Passiamo 'this' così StudenteGUI può aggiornare la tabella
         StudenteGUI g = new StudenteGUI(this);
         g.setVisible(true);
     }

@@ -12,20 +12,24 @@ public class GestioneFile {
 
     public GestioneFile() {
     }
-    // questo sul bottone carica ( come se non fosse ovvio :p) pero cmq qua basta che gli dai Studenti come parametro è ti da tutti gli studenti in una collection.
-    // per caricarli prova o scorrendo o boh non saprei che dirti come mo
+  /**
+   * metodo che carica il file 
+   * @param nomeFile nome del File da carcare
+   * @return l'arrayList di studenti
+   */
     public ArrayList<Studente> caricaDaFile(String nomeFile) {
 
-        ArrayList<Studente> lista = new ArrayList<>();
+        ArrayList<Studente> lista = new ArrayList<>(); 
 
         try {
+            //crea e istanza FileReader e BufferedReader
             FileReader fr = new FileReader(nomeFile);
             BufferedReader br = new BufferedReader(fr);
 
-            String riga;
+            String riga;//righe del file
 
-            while ((riga = br.readLine()) != null) {
-                Studente s = Studente.fromFileString(riga);
+            while ((riga = br.readLine()) != null) { // finchè non è in fondo al file (quindi finchè riga non è null) continua 
+                Studente s = Studente.fromFileString(riga); //crea lo studente preso dalla riga e sotto lo aggiunge alla list
                 if (s != null) {
                     lista.add(s);
                 }
@@ -40,7 +44,13 @@ public class GestioneFile {
 
         return lista;
     }
-// Non so se ti funzia ( dimmi ) ma cmq questo dovrebbe andare sul bottone salva. il nome file è Studenti e i studenti semmai vedi come si fa con la jTable 
+
+    
+    /**
+     * metodo che salva il file 
+     * @param nomeFile nome del file 
+     * @param studenti collection di studenti 
+     */
     public void salvaSuFile(String nomeFile, Collection<Studente> studenti) {
 
         try {
