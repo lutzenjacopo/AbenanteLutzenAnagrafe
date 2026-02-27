@@ -12,30 +12,53 @@ public class Controlli {
 
     public Controlli() {
     }
-    
-    public boolean controlloInt(String n){
+
+    /**
+     * controlla se una variabile String è un int
+     *
+     * @param n parametro da controllare
+     * @return
+     */
+    public boolean controlloInt(String n) {
         try {
-    // Codice che potrebbe generare errori (es. conversione, divisione)
-    int numero = Integer.parseInt(n); 
-} catch (NumberFormatException e) {
-    // Gestione specifica dell'errore
-    System.out.println("Errore: Il dato inserito non è un numero valido!");
-    return false;
-}
-       return true; 
+            //provo a convertire il parametro in un int
+            int numero = Integer.parseInt(n);
+        } catch (NumberFormatException e) {
+            // n è una Stringa
+            System.out.println("Errore: Il dato inserito non è un numero valido!");
+            return false;
+        }
+        // n è un intero
+        return true;
     }
-    public boolean controlloString(String n){
+
+    /**
+     * controlla se una variabile String è una String
+     *
+     * @param n parametro da controllare
+     * @return
+     */
+    public boolean controlloString(String n) {
+        //provo a convertire il parametro in un int
         try {
-    // Codice che potrebbe generare errori (es. conversione, divisione)
-    int numero = Integer.parseInt(n); 
-} catch (NumberFormatException e) {
-    return true;
-}
-       System.out.println("Errore: Il dato inserito è un numero !");
-       return false; 
+            int numero = Integer.parseInt(n);
+        } catch (NumberFormatException e) {
+            // n è una Stringa
+            return true;
+        }
+        // n è un intero
+        System.out.println("Errore: Il dato inserito è un numero !");
+        return false;
     }
-    public boolean controlloNull(String n){
-        if(!n.isEmpty()){
+
+    /**
+     * controlla se una variabile String è nulla
+     *
+     * @param n parametro da controllare
+     * @return
+     */
+    public boolean controlloNull(String n) {
+        if (!n.isEmpty()) {
             return true;
         }
         return false;
