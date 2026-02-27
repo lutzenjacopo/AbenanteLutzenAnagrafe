@@ -12,14 +12,20 @@ import java.util.Objects;
  */
 public class Studente {
     private String matricola,nome,cognome,anno;
-
+/**
+ * costruttorre
+ * @param matricola matricola dello studente
+ * @param nome nome dello studente
+ * @param cognome cognome dello studente
+ * @param anno anno dello studente
+ */
     public Studente(String matricola, String nome, String cognome, String anno) {
         this.matricola = matricola;
         this.nome = nome;
         this.cognome = cognome;
         this.anno = anno;
     }
-
+        //Get & Set
     public String getMatricola() {
         return matricola;
     }
@@ -60,7 +66,11 @@ public class Studente {
         hash = 53 * hash + Objects.hashCode(this.matricola);
         return hash;
     }
-
+/**
+ * metodo equals
+ * @param obj oggettto da controllare
+ * @return return true se sono uguali 
+ */
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {
@@ -75,7 +85,10 @@ public class Studente {
         final Studente other = (Studente) obj;
         return Objects.equals(this.matricola, other.matricola);
     }
-
+/**
+ * Override del metodo String
+ * @return la stringa con matricola, nome, cognome e anno dello studente 
+ */
     @Override
     public String toString() {
         return  matricola + "-" + nome + "-" + cognome + "-" + anno;

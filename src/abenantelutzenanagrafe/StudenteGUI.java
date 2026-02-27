@@ -12,6 +12,7 @@ public class StudenteGUI extends javax.swing.JFrame {
 
     public StudenteGUI(AnagrafeGUI anagrafeGUI) {
         this.anagrafeGUI = anagrafeGUI;
+        c= new Controlli();
         initComponents();
     }
 
@@ -106,11 +107,11 @@ public class StudenteGUI extends javax.swing.JFrame {
             javax.swing.JOptionPane.showMessageDialog(this, "Errore: L'anno inserito non è un numero valido!");
             return;
         }
-        if (c.controlloString(txtNome.getText().trim())){
+        if (!c.controlloString(txtNome.getText().trim())){
             javax.swing.JOptionPane.showMessageDialog(this, "Errore: Il nome inserito non è un valore valido!");
             return;
         }
-        if (c.controlloString(txtCognome.getText().trim())){
+        if (!c.controlloString(txtCognome.getText().trim())){
             javax.swing.JOptionPane.showMessageDialog(this, "Errore: Il cognome inserito non è un valore valido!");
             return;
         }

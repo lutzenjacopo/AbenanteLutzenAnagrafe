@@ -9,7 +9,7 @@ import javax.swing.table.DefaultTableModel;
 
 public class AnagrafeGUI extends javax.swing.JFrame {
 
-    //  Anagrafe CONDIVISA tra tutte le finestre
+    //  Anagrafe condivisa tra tutte le finestre
     public static Anagrafe a = new Anagrafe();
 
     private static final java.util.logging.Logger logger =
@@ -17,12 +17,12 @@ public class AnagrafeGUI extends javax.swing.JFrame {
 
     public AnagrafeGUI() {
         initComponents();
-        String[] colonne = {"Matricola", "Nome", "Cognome", "Anno"};
+        String[] colonne = {"Matricola", "Nome", "Cognome", "Anno"};//cambia i nomi delle colonne della tabella JTable
         DefaultTableModel model = new DefaultTableModel(colonne, 0);
         tblAnagrafe.setModel(model);
     }
 
-    // ✅ Metodo pubblico per aggiornare la tabella dall'esterno (es. StudenteGUI)
+    // Metodo pubblico per aggiornare la tabella dall'esterno (es. StudenteGUI)
     public void aggiornaTabella() {
         DefaultTableModel model = (DefaultTableModel) tblAnagrafe.getModel();
         model.setRowCount(0);
@@ -90,7 +90,7 @@ public class AnagrafeGUI extends javax.swing.JFrame {
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addComponent(btnElimina).addGap(30,30,30))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(btnCercaStudente, javax.swing.GroupLayout.PREFERRED_SIZE,111,javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(btnCercaStudente, javax.swing.GroupLayout.PREFERRED_SIZE,130,javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(33,33,33)))))
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE,javax.swing.GroupLayout.DEFAULT_SIZE,javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0,16,Short.MAX_VALUE))
@@ -115,32 +115,46 @@ public class AnagrafeGUI extends javax.swing.JFrame {
         );
         pack();
     }
-
+/**
+ * bottone carica 
+ * @param evt 
+ */
     private void btnCaricaActionPerformed(java.awt.event.ActionEvent evt) {
-        GestioneFile gf = new GestioneFile();
-        ArrayList<Studente> lista = gf.caricaDaFile("studenti.txt");
+        GestioneFile gf = new GestioneFile();// cera un oggetto gestione File 
+        ArrayList<Studente> lista = gf.caricaDaFile("studenti.txt"); //g
         a = new Anagrafe();
         for (Studente s : lista) {
-            a.aggiungiStudente(s);
+            a.aggiungiStudente(s);// per ogni studente aggiunge lo studente 
         }
-        aggiornaTabella();
-        javax.swing.JOptionPane.showMessageDialog(this, "Caricamento completato! " + lista.size() + " studenti caricati.");
+        aggiornaTabella();// aggiorna la tabella 
+        javax.swing.JOptionPane.showMessageDialog(this, "Caricamento completato! " + lista.size() + " studenti caricati."); // mostra un messaggio se è stato finito il caricamento
     }
 
+    
+    /**
+     * bottone che richiama la GUI dello studente per aggiumgerlo
+     * @param evt 
+     */
     private void btnStudenteGUIActionPerformed(java.awt.event.ActionEvent evt) {
-        // ✅ Passiamo 'this' così StudenteGUI può aggiornare la tabella
+        //  Passa 'this' così StudenteGUI può aggiornare la tabella
         StudenteGUI g = new StudenteGUI(this);
         g.setVisible(true);
     }
-
+/**
+ * bottone che salva  il file
+ * @param evt 
+ */
     private void btnSalvaActionPerformed(java.awt.event.ActionEvent evt) {
         GestioneFile gf = new GestioneFile();
         gf.salvaSuFile("studenti.txt", a.getTuttiStudenti());
-        javax.swing.JOptionPane.showMessageDialog(this, "Salvataggio completato!");
+        javax.swing.JOptionPane.showMessageDialog(this, "Salvataggio completato!"); // qando lo salva arriva il messagio Salvataggio completato
     }
-
+/**
+ * 
+ * @param evt 
+ */
     private void btnEliminaActionPerformed(java.awt.event.ActionEvent evt) {
-        // ✅ Passiamo 'this' così EliminaStudenteGUI può aggiornare la tabella
+        //Passa 'this' così EliminaStudenteGUI può aggiornare la tabella
         EliminaStudenteGUI g = new EliminaStudenteGUI(this);
         g.setVisible(true);
     }
