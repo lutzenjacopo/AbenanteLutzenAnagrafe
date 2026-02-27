@@ -6,9 +6,9 @@ package abenantelutzenanagrafe;
 
 public class StudenteGUI extends javax.swing.JFrame {
 
-    // ✅ Riferimento alla finestra principale per aggiornare la tabella
+    // Riferimento alla finestra principale per aggiornare la tabella
     private AnagrafeGUI anagrafeGUI;
-    private Controlli c;
+    private Controlli c;//oggetto per i controlli
 
     public StudenteGUI(AnagrafeGUI anagrafeGUI) {
         this.anagrafeGUI = anagrafeGUI;
@@ -97,12 +97,17 @@ public class StudenteGUI extends javax.swing.JFrame {
         pack();
     }
 
+    
+    /**
+     * bottone per aggingere lo studente 
+     * @param evt 
+     */
     private void btnAggiungiActionPerformed(java.awt.event.ActionEvent evt) {
         String matricola = txtMatricola.getText().trim();
         String nome = txtNome.getText().trim();
         String cognome = txtCognome.getText().trim();
         String anno = txtAnno.getText().trim();
-        
+        //controlli con messaggi personalizzato 
         if (!c.controlloInt(txtAnno.getText().trim())){
             javax.swing.JOptionPane.showMessageDialog(this, "Errore: L'anno inserito non è un numero valido!");
             return;
@@ -123,14 +128,14 @@ public class StudenteGUI extends javax.swing.JFrame {
 
         Studente s = new Studente(matricola, nome, cognome, anno);
 
-        // ✅ Usiamo l'anagrafeCondivisa (non una nuova Anagrafe!)
+        // l'anagrafeCondivisa 
         boolean aggiunto = AnagrafeGUI.a.aggiungiStudente(s);
 
         if (aggiunto) {
-            // ✅ Aggiorniamo la tabella nella finestra principale
+            // Aggiorna la tabella nella finestra principale
             anagrafeGUI.aggiornaTabella();
             javax.swing.JOptionPane.showMessageDialog(this, "Studente aggiunto con successo!");
-            // Puliamo i campi
+            // Pulisce i campi
             txtMatricola.setText("");
             txtNome.setText("");
             txtCognome.setText("");

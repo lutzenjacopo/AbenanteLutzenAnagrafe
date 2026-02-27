@@ -57,6 +57,10 @@ public class EliminaStudenteGUI extends javax.swing.JFrame {
         pack();
     }
 
+    /**
+     * bottone per eliminare
+     * @param evt 
+     */
     private void btnEliminaActionPerformed(java.awt.event.ActionEvent evt) {
         String matricola = txtMatricola.getText().trim();
         if (matricola.isEmpty()) {
@@ -64,7 +68,7 @@ public class EliminaStudenteGUI extends javax.swing.JFrame {
             return;
         }
 
-        // ✅ Usiamo l'anagrafeCondivisa
+        //  Usiamo l'anagrafe Condivisa per aggiornare la tabella e eliminare lo studente 
         boolean eliminato = AnagrafeGUI.a.eliminaStudente(matricola);
         if (eliminato) {
             anagrafeGUI.aggiornaTabella();

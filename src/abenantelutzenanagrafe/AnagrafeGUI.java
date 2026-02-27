@@ -141,16 +141,16 @@ public class AnagrafeGUI extends javax.swing.JFrame {
         g.setVisible(true);
     }
 /**
- * bottone che salva  il file
+ * bottone che salva il file
  * @param evt 
  */
     private void btnSalvaActionPerformed(java.awt.event.ActionEvent evt) {
-        GestioneFile gf = new GestioneFile();
+        GestioneFile gf = new GestioneFile(); // crea oggetto Festione File e richiama il metodo salvaSuFile
         gf.salvaSuFile("studenti.txt", a.getTuttiStudenti());
-        javax.swing.JOptionPane.showMessageDialog(this, "Salvataggio completato!"); // qando lo salva arriva il messagio Salvataggio completato
+        javax.swing.JOptionPane.showMessageDialog(this, "Salvataggio completato!"); // quando lo salva arriva il messagio Salvataggio completato
     }
 /**
- * 
+ * bottone per eliminare lo studente 
  * @param evt 
  */
     private void btnEliminaActionPerformed(java.awt.event.ActionEvent evt) {
@@ -158,9 +158,12 @@ public class AnagrafeGUI extends javax.swing.JFrame {
         EliminaStudenteGUI g = new EliminaStudenteGUI(this);
         g.setVisible(true);
     }
-
+/**
+ * Bottone Cerca 
+ * @param evt 
+ */
     private void btnCercaStudenteActionPerformed(java.awt.event.ActionEvent evt) {
-        CercaStudenteGUI g = new CercaStudenteGUI();
+        CercaStudenteGUI g = new CercaStudenteGUI(); // crea la Form del Cerca e la rende visibile  
         g.setVisible(true);
     }
 

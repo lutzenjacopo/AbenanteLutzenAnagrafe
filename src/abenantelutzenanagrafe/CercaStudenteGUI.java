@@ -77,11 +77,11 @@ public class CercaStudenteGUI extends javax.swing.JFrame {
     private void btnCercaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCercaActionPerformed
         String matricola = txtMatricola.getText().trim();
         if (matricola.isEmpty()) {
-            javax.swing.JOptionPane.showMessageDialog(this, "Inserisci una matricola!");
+            javax.swing.JOptionPane.showMessageDialog(this, "Inserisci una matricola!");// se è vuota manda un errore 
             return;
         }
 
-        // ✅ Cerca nell'anagrafeCondivisa
+        //  Cerca nell'anagrafe Condivisa e prende tutti i valori poi li mostra su un messaggio 
         Studente s = AnagrafeGUI.a.cercaStudente(matricola);
         if (s != null) {
             javax.swing.JOptionPane.showMessageDialog(this,
