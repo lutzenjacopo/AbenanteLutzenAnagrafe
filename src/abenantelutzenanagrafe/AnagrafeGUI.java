@@ -136,19 +136,25 @@ public class AnagrafeGUI extends javax.swing.JFrame {
      * @param evt 
      */
     private void btnStudenteGUIActionPerformed(java.awt.event.ActionEvent evt) {
-        //  Passiamo 'this' così StudenteGUI può aggiornare la tabella
+        //  Passa 'this' così StudenteGUI può aggiornare la tabella
         StudenteGUI g = new StudenteGUI(this);
         g.setVisible(true);
     }
-
+/**
+ * bottone che salva  il file
+ * @param evt 
+ */
     private void btnSalvaActionPerformed(java.awt.event.ActionEvent evt) {
         GestioneFile gf = new GestioneFile();
         gf.salvaSuFile("studenti.txt", a.getTuttiStudenti());
-        javax.swing.JOptionPane.showMessageDialog(this, "Salvataggio completato!");
+        javax.swing.JOptionPane.showMessageDialog(this, "Salvataggio completato!"); // qando lo salva arriva il messagio Salvataggio completato
     }
-
+/**
+ * 
+ * @param evt 
+ */
     private void btnEliminaActionPerformed(java.awt.event.ActionEvent evt) {
-        // ✅ Passiamo 'this' così EliminaStudenteGUI può aggiornare la tabella
+        //Passa 'this' così EliminaStudenteGUI può aggiornare la tabella
         EliminaStudenteGUI g = new EliminaStudenteGUI(this);
         g.setVisible(true);
     }
